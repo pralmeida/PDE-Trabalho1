@@ -1,0 +1,20 @@
+<!ELEMENT guiao (cabecalho, cena+)>
+<!ELEMENT cabecalho (titulo, autor+, data_publicacao, personagens, sinopse?)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT data_publicacao (ano, mes, dia)>
+<!ELEMENT ano (#PCDATA)>
+<!ELEMENT mes (#PCDATA)>
+<!ELEMENT dia (#PCDATA)>
+<!ELEMENT personagens (personagem*)>
+<!ELEMENT personagem (identificador, nome, descricao)>
+<!ELEMENT identificador (#PCDATA)>
+<!ELEMENT nome (#PCDATA)>
+<!ELEMENT descricao (#PCDATA)>
+<!ELEMENT sinopse (#PCDATA)>
+<!ELEMENT cena (identificador, titulo, contexto, (fala|refere|comentario|adereco)*)>
+<!ELEMENT contexto (#PCDATA)>
+<!ELEMENT fala (#PCDATA)>
+<!ELEMENT refere (#PCDATA)>
+<!ELEMENT comentario (#PCDATA)>
+<!ELEMENT adereco (#PCDATA)>
