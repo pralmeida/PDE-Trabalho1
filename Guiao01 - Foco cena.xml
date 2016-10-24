@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE note SYSTEM "guiao.dtd">
+<guiao>
+	<cabecalho>
+		<titulo>THE WOLF OF WALL STREET</titulo>
+		<autor>Terence Winter</autor>
+		<autor>Jordan Belfort</autor>
+		<data_publicacao>
+			<ano>2013</ano>
+			<mes>03</mes>
+			<dia>12</dia>
+		</data_publicacao>
+		<personagens>
+			<personagem id="jordan">
+				<nome>Jordan Belfort</nome>
+				<descricao>Jordan Belfort is the son of Max and Leah Belfort of New York. In 1989, he and Daniel Porush founded the now defunct brokerage firm Stratton Oakmont which became the largest OTC firm in the United States at that time. Jordan and his business partner were charged with 10 counts of securities fraud and money laundering for the stock manipulation of at least 25 companies that Stratton had underwritten. After serving approximately 22 months in prison he was also ordered to return $100 million to former clients. He reportedly had been earning upwards to $50 million a year during his later years before the Department of Justice in the United States shut his operation down.</descricao>
+			</personagem>
+			<personagem id="naomi">
+				<nome>Naomi Lapaglia</nome>
+				<descricao>Naomi Lapaglia</descricao>
+			</personagem>
+			<personagem id="donnie">
+				<nome>Donnie Azoff</nome>
+				<descricao>Donnie Azoff</descricao>
+			</personagem>
+			<personagem id="mark">
+				<nome>Mark Hanna</nome>
+				<descricao>Mark Hanna</descricao>
+			</personagem>
+		</personagens>
+		<sinopse>
+			In 1987, Jordan Belfort (Leonardo DiCaprio) procures a job as a Wall Street stockbroker for L.F. Rothschild, employed under Mark Hanna (Matthew McConaughey), who quickly entices him with the sex and drugs-fueled stockbroker culture and teaches him that a stockbroker's only job is to make money for himself. Jordan soon finds his career terminated following Black Monday, and takes a job at a boiler room brokerage firm on Long Island that specializes in penny stocks. Thanks to his aggressive pitching style and the high commissions, Jordan makes a small fortune.
+		</sinopse>
+	</cabecalho>
+	<cena>
+		<identificador>1</identificador>
+		<titulo>INSERT - TV COMMERCIAL - DAY</titulo>
+		<contexto>
+			Over jungle sound effects, the CAMERA is low, moving through brush from the POV of a stalking animal. As the brush parts, revealing Wall Street and the New York Stock Exchange, we HEAR the resonant voice of GENE HACKMAN.
+		</contexto>
+		<!-- GENE HACKMAN (V.O.) - The world of investing can be a jungle. (COMO REPRESENTAR UMA VOICE OVER? CONSIDERA-SE UMA FALA? 2 tipos de falas: locução ou diálogo?) -->
+	</cena>
+	<cena>
+		<identificador>2</identificador>
+		<titulo>INT. STRATTON OAKMONT III - BULLPEN - DAY (FEB ‘95)</titulo>
+		<contexto>
+			Absolute bedlam. 300 drunken STOCKBROKERS, most in their early 20s, chant wildly as JORDAN BELFORT, handsome, 30, stands beside a DWARF dressed in tights, cape &amp; helmet.
+		</contexto>
+	</cena>
+</guiao>
