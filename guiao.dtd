@@ -1,6 +1,7 @@
-<!ELEMENT guiao (cabecalho, cena+)>
-<!ELEMENT cabecalho (titulo, autor+, data_publicacao, personagens, sinopse?)>
+<!ELEMENT guiao (cabecalho, (temporadas|episodios|cenas))>
+<!ELEMENT cabecalho (titulo, autores?, data_publicacao, personagens, sinopse?)>
 <!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autores (autor+)>
 <!ELEMENT autor (#PCDATA)>
 <!ELEMENT data_publicacao (ano, mes, dia)>
 <!ELEMENT ano (#PCDATA)>
@@ -13,9 +14,20 @@
 <!ELEMENT nome (#PCDATA)>
 <!ELEMENT descricao (#PCDATA)>
 <!ELEMENT sinopse (#PCDATA)>
-<!ELEMENT cena (identificador, titulo, contexto, (fala|refere|comentario|adereco)*)>
+<!ELEMENT temporadas (temporada*)>
+<!ELEMENT temporada (titulo, sinopse?, episodios?)>
+<!ATTLIST temporada id ID #REQUIRED>
+<!ELEMENT episodios (episodio*)>
+<!ELEMENT episodio (#PCDATA)>
+<!ELEMENT cenas (cena*)>
+<!ELEMENT cena (titulo, personagens?, sinopse?, contexto, conteudo_cena)>
+<!ATTLIST cena id ID #REQUIRED>
 <!ELEMENT contexto (#PCDATA)>
+<!ELEMENT conteudo_cena ( #PCDATA | fala | refere | comentario | adereco )*>
 <!ELEMENT fala (#PCDATA)>
+<!ATTLIST fala personagem IDREF #REQUIRED>
 <!ELEMENT refere (#PCDATA)>
+<!ATTLIST refere personagem IDREF #REQUIRED>
 <!ELEMENT comentario (#PCDATA)>
 <!ELEMENT adereco (#PCDATA)>
+<!ELEMENT note (#PCDATA|fala|refere|comentario|adereco)*>

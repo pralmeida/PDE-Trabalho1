@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE note SYSTEM "guiao.dtd">
+<guiao>
+	<cabecalho>
+		<titulo>Título do Filme</titulo>
+		<autores>
+			<autor>Autor 1</autor>
+			<autor>Autor 2</autor>		
+		</autores>
+		<data_publicacao><ano>2013</ano><mes>03</mes><dia>12</dia></data_publicacao>
+		<personagens>
+			<personagem id="p1">
+				<nome>Personagem 1</nome>
+				<descricao>Personagem 1. Declarada no cabeçalho.</descricao>
+			</personagem>
+			<personagem id="p2">
+				<nome>Personagem 2</nome>
+				<descricao>Personagem 2. Declarada no cabeçalho.</descricao>
+			</personagem>
+		</personagens>
+		<sinopse>Sinopse do guião no cabeçalho.</sinopse>
+	</cabecalho>
+	<temporadas>
+		<temporada id="t1"><titulo>Temporada 1</titulo><sinopse>Sinopse da temporada 1</sinopse></temporada>
+		<temporada id="t2"><titulo>Temporada 1</titulo><episodios></episodios></temporada>
+		<temporada id="t3"><titulo>Temporada 1</titulo></temporada>
+	</temporadas>
+</guiao>
