@@ -21,8 +21,70 @@
 		<sinopse>Sinopse do guião no cabeçalho.</sinopse>
 	</cabecalho>
 	<temporadas>
-		<temporada id="t1"><titulo>Temporada 1</titulo><sinopse>Sinopse da temporada 1</sinopse></temporada>
-		<temporada id="t2"><titulo>Temporada 1</titulo><episodios></episodios></temporada>
-		<temporada id="t3"><titulo>Temporada 1</titulo></temporada>
+		<temporada id="t1"><titulo>Temporada 1. Só tem sinopse.</titulo><sinopse>Sinopse da temporada 1</sinopse></temporada>
+		<temporada id="t2">
+			<titulo>Temporada 2. Tem episódios</titulo>
+			<episodios>
+				<episodio id="e1">
+					<titulo>Episódio 1. Só com título</titulo>
+				</episodio>
+				<episodio id="e2">
+					<titulo>Episódio 2. Com partes</titulo>
+					<partes>
+						<parte id="parte1">
+							<titulo>Primeira Parte. Só com título e sinopse.</titulo>
+							<sinopse>Sinopse da parte 1 do episódio 2 da temporada 2.</sinopse>
+						</parte>
+						<parte id="parte2">
+							<titulo>Primeira Parte. Com cenas.</titulo>
+							<sinopse>Sinopse da parte 2 do episódio 2 da temporada 2.</sinopse>
+							<cenas>
+								<cena id="c1">
+									<titulo>Título da Cena 1</titulo>
+									<sinopse>Sinopse da Cena 1.</sinopse>
+									<contexto>
+										Contexto da cena 1.
+									</contexto>
+									<conteudo_cena>
+									    <fala personagem="p1">Vou te matar!</fala>
+									    Enquanto diz isto pega na <adereco>pistola</adereco> e dispara.
+									    <fala personagem="p2">Ahh, mataste-me...</fala>
+									    E cai morto no chão.
+									    <fala personagem="p3">123</fala>
+									</conteudo_cena>
+									<!-- GENE HACKMAN (V.O.) - The world of investing can be a jungle. (COMO REPRESENTAR UMA VOICE OVER? CONSIDERA-SE UMA FALA? 2 tipos de falas: locução ou diálogo?) -->
+								</cena>
+								<cena id = "c2">
+									<titulo>INT. STRATTON OAKMONT III - BULLPEN - DAY (FEB ‘95)</titulo>
+									<personagens>
+										<personagem id="p3">
+											<nome>Personagem 3</nome>
+											<descricao>Personagem 3. Declarada na cena 3.</descricao>
+										</personagem>
+									</personagens>
+									<contexto>
+										Absolute bedlam. 300 drunken STOCKBROKERS, most in their early 20s, chant wildly as JORDAN BELFORT, handsome, 30, stands beside a DWARF dressed in tights, cape &amp; helmet.
+									</contexto>
+									<conteudo_cena>
+									    <fala personagem="p1">Vou te matar, personagem 2!</fala>
+									    Enquanto diz isto o <refere personagem="p1">personagem 1</refere> pega na <adereco>pistola</adereco> e dispara.
+									    <fala personagem="p2">Ahh, mataste-me...</fala>
+									    E o <refere personagem="p2">personagem 2</refere> cai morto no chão.
+									</conteudo_cena>
+								</cena>							
+							</cenas>
+						</parte>
+					</partes>
+				</episodio>
+				<episodio id="e3">
+					<titulo>Episódio 2. Só com título</titulo>
+					<!-- <temporada id="t98"><titulo>Temporada 98</titulo></temporada> -->
+				</episodio>
+			</episodios>
+		</temporada>
+		<temporada id="t3"><titulo>Temporada 3</titulo>
+			<!-- <temporada id="t99"><titulo>Temporada 99</titulo></temporada> -->
+			<!-- <cena></cena> -->
+		</temporada>
 	</temporadas>
 </guiao>
