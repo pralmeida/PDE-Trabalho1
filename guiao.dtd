@@ -15,16 +15,16 @@
 <!ELEMENT descricao (#PCDATA)>
 <!ELEMENT sinopse (#PCDATA)>
 <!ELEMENT temporadas (temporada*)>
-<!ELEMENT temporada (titulo, sinopse?, episodios?)>
+<!ELEMENT temporada (titulo, sinopse?, personagens?, episodios?)>
 <!ATTLIST temporada id ID #REQUIRED>
 <!ELEMENT episodios (episodio*)>
-<!ELEMENT episodio (titulo, sinopse?, (partes|cenas)?)>
+<!ELEMENT episodio (titulo, sinopse?, personagens?, (partes|cenas)?)>
 <!ATTLIST episodio id ID #REQUIRED>
 <!ELEMENT partes (parte*)>
-<!ELEMENT parte (titulo, sinopse?, cenas?)>
+<!ELEMENT parte (titulo, sinopse?, personagens?, cenas?)>
 <!ATTLIST parte id ID #REQUIRED>
 <!ELEMENT cenas (cena*)>
-<!ELEMENT cena (titulo, personagens?, sinopse?, contexto, conteudo_cena)>
+<!ELEMENT cena (titulo, sinopse?, personagens?, contexto, conteudo_cena)>
 <!ATTLIST cena id ID #REQUIRED>
 <!ELEMENT contexto (#PCDATA)>
 <!ELEMENT conteudo_cena ( #PCDATA | fala | refere | comentario | adereco )*>
@@ -34,4 +34,3 @@
 <!ATTLIST refere personagem IDREF #REQUIRED>
 <!ELEMENT comentario (#PCDATA)>
 <!ELEMENT adereco (#PCDATA)>
-<!ELEMENT note (#PCDATA|fala|refere|comentario|adereco)*>

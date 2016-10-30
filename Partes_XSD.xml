@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
-<!DOCTYPE note SYSTEM "guiao.dtd">
-<guiao>
+<guiao
+	xmlns="http://www.pauloalmeida.org/guiao"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.pauloalmeida.org/guiao guiao.xsd">
 	<cabecalho>
 		<titulo>Título do Filme</titulo>
 		<autores>
@@ -26,7 +28,13 @@
 			<sinopse>Sinopse da parte 1 do episódio 2 da temporada 2.</sinopse>
 		</parte>
 		<parte id="parte2">
-			<titulo>Primeira Parte. Com cenas.</titulo>
+			<titulo>Parte 2. Com cenas.</titulo>
+			<personagens>
+				<personagem id="p4">
+					<nome>Personagem 4. Declarada na parte 2</nome>
+					<descricao>Descrição do personagem 4</descricao>
+				</personagem>
+			</personagens>
 			<cenas>
 				<cena id="c1">
 					<titulo>Título da Cena 1</titulo>

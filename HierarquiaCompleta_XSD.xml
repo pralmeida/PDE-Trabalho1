@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
-<!DOCTYPE note SYSTEM "guiao.dtd">
-<guiao>
+<guiao
+	xmlns="http://www.pauloalmeida.org/guiao"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.pauloalmeida.org/guiao guiao.xsd">
 	<cabecalho>
 		<titulo>Título do Filme</titulo>
 		<autores>
@@ -24,6 +26,12 @@
 		<temporada id="t1"><titulo>Temporada 1. Só tem sinopse.</titulo><sinopse>Sinopse da temporada 1</sinopse></temporada>
 		<temporada id="t2">
 			<titulo>Temporada 2. Tem episódios</titulo>
+			<personagens>
+				<personagem id="p5">
+					<nome>Personagem 5. Declarada na temporada 2</nome>
+					<descricao>Descrição da personagem 5</descricao>
+				</personagem>
+			</personagens>
 			<episodios>
 				<episodio id="e1">
 					<titulo>Episódio 1. Só com título</titulo>
@@ -78,6 +86,13 @@
 				</episodio>
 				<episodio id="e3">
 					<titulo>Episódio 2. Só com título</titulo>
+					<personagens>
+						<personagem id="p4">
+							<nome>Personagem 4. Declarada num episódio</nome>
+							<descricao>Personagem 4. Declarada num episódio</descricao>
+						</personagem>
+					
+					</personagens>
 					<!-- <temporada id="t98"><titulo>Temporada 98</titulo></temporada> -->
 				</episodio>
 			</episodios>
