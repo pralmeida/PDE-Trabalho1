@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.pauloalmeida.org/guiao"
+	xmlns:tns="http://www.pauloalmeida.org/guiao"
+	elementFormDefault="qualified">
+	<include schemaLocation=""></include>
+
+	<element name="guiao">
+	    <complexType>
+	    	<sequence>
+	    		<element name="cabecalho" maxOccurs="1" minOccurs="1">
+	    			<complexType>
+	    				<sequence>
+	    					<element name="titulo" type="string"
+	    						maxOccurs="1" minOccurs="1">
+	    					</element>
+	    					<element name="autores" maxOccurs="1"
+	    						minOccurs="0">
+	    						<complexType>
+	    							<sequence>
+	    								<element name="autor"
+	    									maxOccurs="unbounded" minOccurs="1" type="string">
+	    								</element>
+
+	    							</sequence>
+	    						</complexType>
+	    					</element>
+	    					<element name="data_publicacao"
+	    						type="tns:data" maxOccurs="1" minOccurs="1">
+	    					</element>
+	    					<element name="personagens"
+	    						type="tns:personagens" maxOccurs="1" minOccurs="1">
+	    					</element>
+	    					<element name="sinopse" type="string"
+	    						maxOccurs="1" minOccurs="0">
+	    					</element>
+	    				</sequence>
+	    			</complexType>
+	    		</element>
+	    		<choice maxOccurs="1" minOccurs="0">
+	    			<element name="temporadas" type="string" maxOccurs="1" minOccurs="0"></element>
+	    			<element name="episodios" type="string" maxOccurs="1" minOccurs="0"></element>
+	    			<element name="partes" type="string" maxOccurs="1" minOccurs="0"></element>
+	    			<element name="cenas" maxOccurs="1" minOccurs="0">
+	    				<complexType>
+	    					<sequence>
+	    						<element name="cena"
+	    							maxOccurs="unbounded" minOccurs="0">
+	    							<complexType>
+	    								<sequence>
+	    									<element name="titulo"
+	    										type="string" maxOccurs="1" minOccurs="1">
+	    									</element>
+	    									<element name="personagens"
+	    										type="tns:personagens" maxOccurs="1" minOccurs="0">
+	    									</element>
+	    									<element name="sinopse"
+	    										type="string" maxOccurs="1" minOccurs="0">
+	    									</element>
+	    									<element name="contexto"
+	    										type="string" maxOccurs="1" minOccurs="1">
+	    									</element>
+	    									<element
+	    										name="conteudo_cena" maxOccurs="1" minOccurs="1">
+	    										<complexType mixed="true">
+	    											<choice maxOccurs="unbounded" minOccurs="0">
+	    												<element
+	    													name="fala" maxOccurs="unbounded" minOccurs="0">
+	    													<complexType
+	    														mixed="true">
+	    														<choice maxOccurs="unbounded" minOccurs="0">
+	    															<element
+	    																name="adereco" type="string">
+	    															</element>
+	    															<element
+	    																name="comentario" type="string">
+	    															</element>
+	    														</choice>
+	    														<attribute
+	    															name="personagem" type="IDREF" use="required">
+	    														</attribute>
+	    													</complexType>
+	    												</element>
+	    												<element
+	    													name="refere" maxOccurs="unbounded" minOccurs="0">
+	    													<complexType>
+	    														<simpleContent>
+	    															<extension
+	    																base="string">
+	    																<attribute
+	    																	name="personagem" type="IDREF" use="required">
+	    																</attribute>
+	    															</extension>
+	    														</simpleContent>
+	    													</complexType>
+	    												</element>
+	    												<element
+	    													name="comentario" type="string" maxOccurs="unbounded" minOccurs="0">
+	    												</element>
+	    												<element
+	    													name="adereco" type="string" maxOccurs="unbounded" minOccurs="0">
+	    												</element>
+	    											</choice>
+	    										</complexType>
+	    									</element>
+	    								</sequence>
+	    								<attribute name="id"
+	    									type="ID">
+	    								</attribute>
+	    							</complexType>
+	    						</element>
+	    					</sequence>
+	    				</complexType>
+	    			</element>
+	    		</choice>
+	    	</sequence>
+	    </complexType>
+	</element>
+	
+
+
+
+
+	<complexType name="data">
+		<sequence>
+			<element name="ano" type="int"></element>
+			<element name="mes" type="int"></element>
+			<element name="dia" type="int"></element>
+		</sequence>
+	</complexType>
+
+	<complexType name="personagens">
+		<sequence>
+			<element name="personagem" maxOccurs="unbounded"
+				minOccurs="0">
+				<complexType>
+					<sequence>
+						<element name="nome" type="string" maxOccurs="1"
+							minOccurs="1">
+						</element>
+						<element name="descricao" type="string"
+							maxOccurs="1" minOccurs="1">
+						</element>
+					</sequence>
+					<attribute name="id" type="ID"></attribute>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</schema>
+
+<!-- 
+<!ELEMENT guiaoguiao (cabecalho, (temporadas|episodios|partes|cenas)?)>
+<!ELEMENT cabecalho (titulo, autores?, data_publicacao, personagens, sinopse?)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autores (autor+)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT data_publicacao (ano, mes, dia)>
+<!ELEMENT ano (#PCDATA)>
+<!ELEMENT mes (#PCDATA)>
+<!ELEMENT dia (#PCDATA)>
+<!ELEMENT personagens (personagem*)>
+<!ELEMENT personagem (nome, descricao)>
+<!ATTLIST personagem id ID #REQUIRED>
+<!ELEMENT identificador (#PCDATA)>
+<!ELEMENT nome (#PCDATA)>
+ -->
