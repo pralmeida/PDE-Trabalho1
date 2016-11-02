@@ -59,9 +59,30 @@
 
 	<complexType name="dataComplexType">
 		<sequence>
-			<element name="ano" type="int"></element>
-			<element name="mes" type="int"></element>
-			<element name="dia" type="int"></element>
+			<element name="ano" maxOccurs="1" minOccurs="1">
+				<simpleType>
+					<restriction base="int">
+						<minInclusive value="1900"></minInclusive>
+						<maxInclusive value="2020"></maxInclusive>
+					</restriction>
+				</simpleType>
+			</element>
+			<element name="mes" maxOccurs="1" minOccurs="1">
+				<simpleType>
+					<restriction base="int">
+						<minInclusive value="1"></minInclusive>
+						<maxInclusive value="12"></maxInclusive>
+					</restriction>
+				</simpleType>
+			</element>
+			<element name="dia" maxOccurs="1" minOccurs="1">
+				<simpleType>
+					<restriction base="int">
+						<minInclusive value="1"></minInclusive>
+						<maxInclusive value="31"></maxInclusive>
+					</restriction>
+				</simpleType>
+			</element>
 		</sequence>
 	</complexType>
 
@@ -226,20 +247,3 @@
 	</complexType>
 	
 </schema>
-
-<!-- 
-<!ELEMENT guiaoguiao (cabecalho, (temporadas|episodios|partes|cenas)?)>
-<!ELEMENT cabecalho (titulo, autores?, data_publicacao, personagens, sinopse?)>
-<!ELEMENT titulo (#PCDATA)>
-<!ELEMENT autores (autor+)>
-<!ELEMENT autor (#PCDATA)>
-<!ELEMENT data_publicacao (ano, mes, dia)>
-<!ELEMENT ano (#PCDATA)>
-<!ELEMENT mes (#PCDATA)>
-<!ELEMENT dia (#PCDATA)>
-<!ELEMENT personagens (personagem*)>
-<!ELEMENT personagem (nome, descricao)>
-<!ATTLIST personagem id ID #REQUIRED>
-<!ELEMENT identificador (#PCDATA)>
-<!ELEMENT nome (#PCDATA)>
- -->

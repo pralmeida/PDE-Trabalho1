@@ -9,7 +9,7 @@
 			<autor>Autor 1</autor>
 			<autor>Autor 2</autor>		
 		</autores>
-		<data_publicacao><ano>2013</ano><mes>03</mes><dia>12</dia></data_publicacao>
+		<data_publicacao><ano>2013</ano><mes>12</mes><dia>12</dia></data_publicacao>
 		<personagens>
 			<personagem id="p1">
 				<nome>Personagem 1</nome>
