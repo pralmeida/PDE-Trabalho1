@@ -2,10 +2,7 @@
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
 	targetNamespace="http://www.pauloalmeida.org/guiao"
 	xmlns:tns="http://www.pauloalmeida.org/guiao"
-	elementFormDefault="qualified">
-    <include schemaLocation=""></include>
-    <include schemaLocation=""></include>
-    <include schemaLocation=""></include>
+	elementFormDefault="qualified">
 
 	<element name="guiao">
 	    <complexType>
@@ -31,7 +28,8 @@
 	    						type="tns:dataComplexType" maxOccurs="1" minOccurs="1">
 	    					</element>
 	    					<element name="personagens"
-	    						type="tns:personagensComplexType" maxOccurs="1" minOccurs="1">
+	    						type="tns:personagensComplexType" maxOccurs="1"
+	    						minOccurs="1">
 	    					</element>
 	    					<element name="sinopse" type="string"
 	    						maxOccurs="1" minOccurs="0">
@@ -46,14 +44,20 @@
 	    			<element name="episodios"
 	    				type="tns:episodiosComplexType" maxOccurs="1" minOccurs="0">
 	    			</element>
-	    			<element name="partes" maxOccurs="1"
-	    				minOccurs="0" type="tns:partesComplexType">
+	    			<element name="partes" maxOccurs="1" minOccurs="0"
+	    				type="tns:partesComplexType">
 	    			</element>
-	    			<element name="cenas" maxOccurs="1" minOccurs="0" type="tns:cenasComplexType">
+	    			<element name="cenas" maxOccurs="1" minOccurs="0"
+	    				type="tns:cenasComplexType">
 	    			</element>
 	    		</choice>
 	    	</sequence>
+		<!-- experimentar com isto e tentar limitar personagens e adereços -->
 	    </complexType>
+		<key name="myId"> 
+			<selector xpath="./AAA/a"/> 
+			<field xpath="@id"/> 
+		</key> 
 	</element>
 	
 
@@ -246,4 +250,6 @@
 		</sequence>
 	</complexType>
 	
+
+
 </schema>
