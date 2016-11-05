@@ -55,14 +55,15 @@
 			</contexto>
 			<conteudo_cena>
 			    <fala personagem="p1">
-			    	Vou te matar, personagem 2!
+			    	Vou te matar com a minha <adereco>pistola</adereco>, <refere personagem="p2">personagem 2</refere>!
 			    	<comentario>
-			    		O personagem 1 está com cara de que está a falar mesmo a sério.
+			    		O <refere personagem="p1">personagem 1</refere> está com cara de que está a falar mesmo a sério.
 			    	</comentario>
 			    </fala>
 			    Enquanto diz isto o <refere personagem="p1">personagem 1</refere> pega na <adereco>pistola</adereco> e dispara.
 		    	<comentario>
-		    		Esta parte é em câmara lenta.
+		    		Esta parte é em câmara lenta. 
+		    		A bala parte da <adereco>pistola</adereco> e vai direitinha a caminho do coração do <refere personagem="p2">personagem 2</refere>
 		    	</comentario>
 			    <fala personagem="p2">Ahh, mataste-me...</fala>
 			    E o <refere personagem="p2">personagem 2</refere> cai morto no chão.

@@ -2,7 +2,7 @@
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
 	targetNamespace="http://www.pauloalmeida.org/guiao"
 	xmlns:tns="http://www.pauloalmeida.org/guiao"
-	elementFormDefault="qualified">
+	elementFormDefault="qualified">
 
 	<element name="guiao">
 	    <complexType>
@@ -139,7 +139,10 @@
 													type="string">
 												</element>
 												<element
-													name="comentario" type="string">
+													name="comentario" type="tns:ComentarioComplexType">
+												</element>
+												<element name="refere"
+													type="tns:refereComplexType">
 												</element>
 											</choice>
 											<attribute use="required"
@@ -148,20 +151,11 @@
 										</complexType>
 									</element>
 									<element minOccurs="0"
-										maxOccurs="unbounded" name="refere">
-										<complexType>
-											<simpleContent>
-												<extension
-													base="string">
-													<attribute
-														use="required" name="personagem" type="IDREF">
-													</attribute>
-												</extension>
-											</simpleContent>
-										</complexType>
+										maxOccurs="unbounded" name="refere" type="tns:refereComplexType">
 									</element>
 									<element minOccurs="0"
-										maxOccurs="unbounded" name="comentario" type="string">
+										maxOccurs="unbounded" name="comentario"
+										type="tns:ComentarioComplexType">
 									</element>
 									<element minOccurs="0"
 										maxOccurs="unbounded" name="adereco" type="string">
@@ -252,4 +246,21 @@
 	
 
 
+
+	<complexType name="ComentarioComplexType" mixed="true">
+		<choice maxOccurs="unbounded" minOccurs="0">
+			<element name="refere" type="tns:refereComplexType">
+			</element>
+			<element name="adereco" type="string"></element>
+		</choice>
+	</complexType>
+	<complexType name="refereComplexType">
+		<simpleContent>
+			<extension base="string">
+				<attribute use="required" name="personagem"
+					type="IDREF">
+				</attribute>
+			</extension>
+		</simpleContent>
+	</complexType>
 </schema>

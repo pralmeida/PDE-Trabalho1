@@ -28,9 +28,9 @@
 <!ATTLIST cena id ID #REQUIRED>
 <!ELEMENT contexto (#PCDATA)>
 <!ELEMENT conteudo_cena ( #PCDATA | fala | refere | comentario | adereco )*>
-<!ELEMENT fala (#PCDATA | comentario)*>
+<!ELEMENT fala (#PCDATA | comentario | refere | adereco)*>
 <!ATTLIST fala personagem IDREF #REQUIRED>
 <!ELEMENT refere (#PCDATA)>
 <!ATTLIST refere personagem IDREF #REQUIRED>
-<!ELEMENT comentario (#PCDATA)>
+<!ELEMENT comentario (#PCDATA | refere | adereco)*>
 <!ELEMENT adereco (#PCDATA)>
