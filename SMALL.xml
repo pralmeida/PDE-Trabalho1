@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="versao2.xsl"?>
+<!DOCTYPE note SYSTEM "guiao.dtd">
+<guiao>
+	<cabecalho>
+		<titulo>ABC</titulo>
+		<autores>
+			<autor>Autor 1</autor>
+		</autores>
+		<data_publicacao><ano>2013</ano><mes>03</mes><dia>12</dia></data_publicacao>
+		<personagens>
+		</personagens>
+		<sinopse>Sinopse</sinopse>
+	</cabecalho>
+</guiao>
