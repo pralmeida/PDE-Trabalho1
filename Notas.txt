@@ -1,0 +1,3 @@
+- Criar um template corpo_cenas
+	- 1º  Colocar uma linha com o contexto
+	- 2º Numeração da cena - Global. Ver exemplo no site da cadeira em EXEMPLOS/RELATORIO/NUMERACAO.

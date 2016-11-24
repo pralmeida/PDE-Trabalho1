@@ -19,6 +19,10 @@
 				<nome>Personagem 2</nome>
 				<descricao>Personagem 2. Declarada no cabeçalho.</descricao>
 			</personagem>
+			<personagem id="p3">
+				<nome>Personagem 3</nome>
+				<descricao>Personagem 3. Declarada no cabeçalho.</descricao>
+			</personagem>
 		</personagens>
 		<sinopse>
 			Sinopse do guião no cabeçalho.
@@ -27,47 +31,28 @@
 		</sinopse>
 	</cabecalho>
 	<cenas>
-		<cena id="c1">
-			<titulo>Título da Cena 1</titulo>
-			<sinopse>Sinopse da Cena 1.</sinopse>
-			<contexto>
-				Contexto da cena 1.
-			</contexto>
-			<conteudo_cena>
-			    <fala personagem="p1">Vou te matar!</fala>
-			    Enquanto diz isto pega na <adereco>pistola</adereco> e dispara.
-			    <fala personagem="p2">Ahh, mataste-me...</fala>
-			    E cai morto no chão.
-			    <fala personagem="p3">123</fala>
-			</conteudo_cena>
+		<cena contexto="Contexto da cena 1.">
+		    <fala personagem="p1">Vou te matar!</fala>
+		    Enquanto diz isto pega na <adereco>pistola</adereco> e dispara.
+		    <fala personagem="p2">Ahh, mataste-me...</fala>
+		    E cai morto no chão.
+		    <fala personagem="p3">123</fala>
 			<!-- GENE HACKMAN (V.O.) - The world of investing can be a jungle. (COMO REPRESENTAR UMA VOICE OVER? CONSIDERA-SE UMA FALA? 2 tipos de falas: locução ou diálogo?) -->
 		</cena>
-		<cena id = "c2">
-			<titulo>INT. STRATTON OAKMONT III - BULLPEN - DAY (FEB ‘95)</titulo>
-			<personagens>
-				<personagem id="p3">
-					<nome>Personagem 3</nome>
-					<descricao>Personagem 3. Declarada na cena 3.</descricao>
-				</personagem>
-			</personagens>
-			<contexto>
-				Absolute bedlam. 300 drunken STOCKBROKERS, most in their early 20s, chant wildly as JORDAN BELFORT, handsome, 30, stands beside a DWARF dressed in tights, cape &amp; helmet.
-			</contexto>
-			<conteudo_cena>
-			    <fala personagem="p1">
-			    	Vou te matar com a minha <adereco>pistola</adereco>, <refere personagem="p2">personagem 2</refere>!
-			    	<comentario>
-			    		O <refere personagem="p1">personagem 1</refere> está com cara de que está a falar mesmo a sério.
-			    	</comentario>
-			    </fala>
-			    Enquanto diz isto o <refere personagem="p1">personagem 1</refere> pega na <adereco>pistola</adereco> e dispara.
+		<cena contexto = "Absolute bedlam. 300 drunken STOCKBROKERS, most in their early 20s">
+		    <fala personagem="p1">
+		    	Vou te matar com a minha <adereco>pistola</adereco>, <refere personagem="p2">personagem 2</refere>!
 		    	<comentario>
-		    		Esta parte é em câmara lenta. 
-		    		A bala parte da <adereco>pistola</adereco> e vai direitinha a caminho do coração do <refere personagem="p2">personagem 2</refere>
+		    		O <refere personagem="p1">personagem 1</refere> está com cara de que está a falar mesmo a sério.
 		    	</comentario>
-			    <fala personagem="p2">Ahh, mataste-me...</fala>
-			    E o <refere personagem="p2">personagem 2</refere> cai morto no chão.
-			</conteudo_cena>
+		    </fala>
+		    Enquanto diz isto o <refere personagem="p1">personagem 1</refere> pega na <adereco>pistola</adereco> e dispara.
+	    	<comentario>
+	    		Esta parte é em câmara lenta. 
+	    		A bala parte da <adereco>pistola</adereco> e vai direitinha a caminho do coração do <refere personagem="p2">personagem 2</refere>
+	    	</comentario>
+		    <fala personagem="p2">Ahh, mataste-me...</fala>
+		    E o <refere personagem="p2">personagem 2</refere> cai morto no chão.
 		</cena>
 	</cenas>
 </guiao>

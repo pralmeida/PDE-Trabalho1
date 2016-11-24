@@ -24,10 +24,8 @@
 <!ELEMENT parte (titulo, sinopse?, personagens?, cenas?)>
 <!ATTLIST parte id ID #REQUIRED>
 <!ELEMENT cenas (cena*)>
-<!ELEMENT cena (titulo, sinopse?, personagens?, contexto, conteudo_cena)>
-<!ATTLIST cena id ID #REQUIRED>
-<!ELEMENT contexto (#PCDATA)>
-<!ELEMENT conteudo_cena ( #PCDATA | fala | refere | comentario | adereco )*>
+<!ELEMENT cena ( #PCDATA | fala | refere | comentario | adereco )*>
+<!ATTLIST cena contexto CDATA #REQUIRED>
 <!ELEMENT fala (#PCDATA | comentario | refere | adereco)*>
 <!ATTLIST fala personagem IDREF #REQUIRED>
 <!ELEMENT refere (#PCDATA)>

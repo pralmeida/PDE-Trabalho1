@@ -111,60 +111,30 @@
 	<complexType name="cenasComplexType">
 		<sequence>
 			<element minOccurs="0" maxOccurs="unbounded" name="cena">
-				<complexType>
-					<sequence>
-						<element minOccurs="1" maxOccurs="1"
-							name="titulo" type="string">
-						</element>
-						<element minOccurs="0" maxOccurs="1"
-							name="personagens" type="tns:personagensComplexType">
-						</element>
-						<element minOccurs="0" maxOccurs="1"
-							name="sinopse" type="string">
-						</element>
-						<element minOccurs="1" maxOccurs="1"
-							name="contexto" type="string">
-						</element>
-						<element minOccurs="1" maxOccurs="1"
-							name="conteudo_cena">
-							<complexType mixed="true">
-								<choice minOccurs="0"
-									maxOccurs="unbounded">
-									<element minOccurs="0"
-										maxOccurs="unbounded" name="fala">
+				<complexType mixed="true">
+                    <choice maxOccurs="unbounded" minOccurs="0">
+                        <element minOccurs="0" maxOccurs="unbounded" name="fala">
 										<complexType mixed="true">
-											<choice minOccurs="0"
-												maxOccurs="unbounded">
-												<element name="adereco"
-													type="string">
+											<choice minOccurs="0" maxOccurs="unbounded">
+												<element name="adereco" type="string">
 												</element>
-												<element
-													name="comentario" type="tns:ComentarioComplexType">
+												<element name="comentario" type="tns:ComentarioComplexType">
 												</element>
-												<element name="refere"
-													type="tns:refereComplexType">
+												<element name="refere" type="tns:refereComplexType">
 												</element>
 											</choice>
-											<attribute use="required"
-												name="personagem" type="IDREF">
+											<attribute use="required" name="personagem" type="IDREF">
 											</attribute>
 										</complexType>
 									</element>
-									<element minOccurs="0"
-										maxOccurs="unbounded" name="refere" type="tns:refereComplexType">
+                        <element minOccurs="0" maxOccurs="unbounded" name="refere" type="tns:refereComplexType">
 									</element>
-									<element minOccurs="0"
-										maxOccurs="unbounded" name="comentario"
-										type="tns:ComentarioComplexType">
+                        <element minOccurs="0" maxOccurs="unbounded" name="comentario" type="tns:ComentarioComplexType">
 									</element>
-									<element minOccurs="0"
-										maxOccurs="unbounded" name="adereco" type="string">
+                        <element minOccurs="0" maxOccurs="unbounded" name="adereco" type="string">
 									</element>
-								</choice>
-							</complexType>
-						</element>
-					</sequence>
-					<attribute name="id" type="ID"></attribute>
+                    </choice>
+					<attribute name="contexto" type="string" use="required"></attribute>
 				</complexType>
 			</element>
 		</sequence>
