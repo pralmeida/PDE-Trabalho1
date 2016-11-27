@@ -1,0 +1,52 @@
+h1, h2, h3 {
+	font-style: italic;
+	text-align: center;
+}
+
+p.personagem {
+	text-align: center;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+h3.personagem {
+	margin-bottom: 0px;
+	text-decoration: underline;
+}
+
+p.contexto {
+	text-align: center;
+	font-weight: bold;
+	font-variant: small-caps;
+}
+
+.sinopse {
+	margin-left: 3cm;
+	margin-right: 3cm;
+	margin-top: 0px;
+	text-align: justify;
+}
+
+
+
+.personagens_cena {
+	font-variant: small-caps;
+}
+
+p.personagem_fala {
+	font-variant: small-caps;
+	margin-left: 11cm;
+	margin-bottom: 0px;
+}
+
+.fala {
+	margin-left: 7cm;
+	margin-right: 7cm;
+	margin-bottom: 10px;
+	text-align: justify;
+	
+}
+
+.comentario {
+	font-style: italic;
+}

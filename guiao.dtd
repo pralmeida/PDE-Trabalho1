@@ -26,9 +26,9 @@
 <!ELEMENT cenas (cena*)>
 <!ELEMENT cena ( #PCDATA | fala | refere | comentario | adereco )*>
 <!ATTLIST cena contexto CDATA #REQUIRED>
-<!ELEMENT fala (#PCDATA | comentario | refere | adereco)*>
+<!ELEMENT fala (#PCDATA | comentario)*>
 <!ATTLIST fala personagem IDREF #REQUIRED>
 <!ELEMENT refere (#PCDATA)>
 <!ATTLIST refere personagem IDREF #REQUIRED>
-<!ELEMENT comentario (#PCDATA | refere | adereco)*>
+<!ELEMENT comentario (#PCDATA)>
 <!ELEMENT adereco (#PCDATA)>

@@ -1,43 +1,82 @@
 <?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="Guiao_transf.xsl"?>
 <guiao
-	xmlns="http://www.pauloalmeida.org/guiao"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.pauloalmeida.org/guiao guiao.xsd">
+	xsi:noNamespaceSchemaLocation="guiao.xsd">
 	<cabecalho>
-		<titulo>Título do Filme</titulo>
+		<titulo>Transformers</titulo>
 		<autores>
-			<autor>Autor 1</autor>
-			<autor>Autor 2</autor>		
+			<autor>José Saramago</autor>
+			<autor>Ricardo Araújo Pereira</autor>		
 		</autores>
-		<data_publicacao><ano>2013</ano><mes>12</mes><dia>12</dia></data_publicacao>
+		<data_publicacao><ano>2013</ano><mes>03</mes><dia>12</dia></data_publicacao>
 		<personagens>
 			<personagem id="p1">
-				<nome>Personagem 1</nome>
+				<nome>Don Vito Corleone</nome>
 				<descricao>Personagem 1. Declarada no cabeçalho.</descricao>
 			</personagem>
 			<personagem id="p2">
-				<nome>Personagem 2</nome>
+				<nome>James Bond</nome>
 				<descricao>Personagem 2. Declarada no cabeçalho.</descricao>
 			</personagem>
+			<personagem id="p6">
+				<nome>Rocky Balboa</nome>
+				<descricao>Personagem 6. Declarada no cabeçalho.</descricao>
+			</personagem>
+			<personagem id="p7">
+				<nome>Forrest Gump</nome>
+				<descricao>Personagem 7. Declarada no cabeçalho.</descricao>
+			</personagem>
 		</personagens>
-		<sinopse>Sinopse do guião no cabeçalho.</sinopse>
+		<sinopse>The orphan Mandy Lane is a beautiful, virgin and pure teenager raised by her aunt, desired by her schoolmates and a close friend of the outcast Emmet. After the death of their high school mate in a pool party, Mandy befriends Chloe, Marlin, Red, Bird and Jake. Red invites the group for a weekend party in the isolated ranch of his family, with all the boys disputing who would succeed in having sex with Mandy Lane. They meet the henchman Garth that takes care of the ranch and he asks the group to go easy on the drugs and booze. In the middle of the night, a stranger wearing a hood attacks Marlin in the barn; when Jake seeks her out, he faces the killer, beginning a night of bloodshed and terror. </sinopse>
 	</cabecalho>
 	<temporadas>
-		<temporada id="t1"><titulo>Temporada 1. Só tem sinopse.</titulo><sinopse>Sinopse da temporada 1</sinopse></temporada>
+		<temporada id="t1">
+			<titulo>Temporada 1</titulo>
+			<sinopse>The first season follows the rescue of Lincoln Burrows (Dominic Purcell), who is accused of murdering Terrence Steadman (Jeff Perry), the brother of the Vice President of the United States. Lincoln is sentenced to death and is incarcerated in Fox River State Penitentiary where he awaits his execution. Lincoln's brother, brilliant structural engineer Michael Scofield (Wentworth Miller) , is convinced of Lincoln's innocence and formulates an escape plan.</sinopse>
+		</temporada>
 		<temporada id="t2">
-			<titulo>Temporada 2. Tem episódios</titulo>
+			<titulo>Temporada 2</titulo>
+			<sinopse>The second season begins eight hours after the escape, focusing mainly on the escapees. The fugitives split up and journey to locations across the country with the authorities close behind them as they each pursue their individual goals. </sinopse>
 			<personagens>
 				<personagem id="p5">
-					<nome>Personagem 5. Declarada na temporada 2</nome>
+					<nome>Darth Vader</nome>
 					<descricao>Descrição da personagem 5</descricao>
 				</personagem>
 			</personagens>
 			<episodios>
 				<episodio id="e1">
-					<titulo>Episódio 1. Só com título</titulo>
+					<titulo>Episódio 1</titulo>
+					<sinopse>Michael Scofield is imprisoned in Fox River State Penitentiary. He finds his brother, Lincoln Burrows, who is a death row prisoner, and tells him that he is going to break them both out of the prison.</sinopse>
+					<cenas>
+						<cena contexto="Na Sala de Jantar">
+						    <fala personagem="p1"><comentario>Just a comment</comentario>Is that it? Got the cue tips, got the mini-umbrella, something boring to read on the plane. <comentario>zips his bag with exaggerated motions</comentario> That's it. Done!</fala>
+						    Enquanto diz isto pega na <adereco>pistola</adereco> e dispara.
+						    <fala personagem="p2">Ahh, mataste-me...</fala>
+						    E cai morto no chão.
+						    <fala personagem="p4">123</fala>
+						</cena>
+						<cena contexto = "Abertura do frigorifico.">
+						    <fala personagem="p1">Vou te matar, personagem 2!</fala>
+						    Enquanto diz isto o 
+						    <refere personagem="p1">personagem 1</refere> 
+						    pega na 
+						    <adereco>pistola</adereco> e dispara.
+						    <fala personagem="p2">
+						    	Ahh, mataste-me...
+						    </fala>
+						    E o <refere personagem="p2">personagem 2</refere> cai morto no chão.
+						    <adereco>casaco</adereco> e dispara.
+						    E o <refere personagem="p5">personagem 2</refere> cai morto no chão.
+						    <adereco>pistola</adereco> e dispara. <comentario>e este comentário aqui? À pois é!</comentario>
+						    E o <refere personagem="p7">personagem 2</refere> cai morto no chão.
+						    <adereco>papagaio</adereco> e dispara.
+						</cena>							
+					</cenas>
 				</episodio>
 				<episodio id="e2">
-					<titulo>Episódio 2. Com partes</titulo>
+					<titulo>Episódio 2</titulo>
+					<sinopse>Trouble is inevitable in the prison, with a race riot imminent. Michael has problems retrieving a screw from the bleachers. Veronica receives a security tape that shows Lincoln shooting Terrence Steadman.</sinopse>
 					<partes>
 						<parte id="parte1">
 							<titulo>Primeira Parte. Só com título e sinopse.</titulo>
@@ -46,35 +85,36 @@
 						<parte id="parte2">
 							<titulo>Primeira Parte. Com cenas.</titulo>
 							<sinopse>Sinopse da parte 2 do episódio 2 da temporada 2.</sinopse>
-							<personagens>
-								<personagem id="p3">
-									<nome>Personagem 3</nome>
-									<descricao>Personagem 3. Declarada na parte 2.</descricao>
-								</personagem>
-							</personagens>
 							<cenas>
 								<cena contexto="Contexto da cena 1.">
 								    <fala personagem="p1">Vou te matar!</fala>
 								    Enquanto diz isto pega na <adereco>pistola</adereco> e dispara.
 								    <fala personagem="p2">Ahh, mataste-me...</fala>
 								    E cai morto no chão.
-								    <fala personagem="p3">123</fala>
+								    <fala personagem="p4">123</fala>
 								</cena>
-								<cena contexto = "Absolute bedlam. 300 drunken STOCKBROKERS, most in their early 20s">
-								    <fala personagem="p1">Vou te matar, personagem 2!</fala>
-								    Enquanto diz isto o <refere personagem="p1">personagem 1</refere> pega na <adereco>pistola</adereco> e dispara.
-								    <fala personagem="p2">Ahh, mataste-me...</fala>
-								    E o <refere personagem="p2">personagem 2</refere> cai morto no chão.
+								<cena contexto = "EXT. HIGH SCHOOL FOOTBALL FIELD &amp; TRACK - DAY">
+									There's a ton of activity on the field, but as <refere personagem="p4">Mandy</refere> steps onto the track, her focus is extreme.
+									<comentario>All SOUNDS die away</comentario> If we didn't notice before, we can see now that she's a serious athlete. She stretches, loosening her muscles, pacing her breath.
+									Several other RUNNERS assemble on the track. Among them, <refere personagem="p7">EMMET</refere>, small scar above his eye. <refere personagem="p7">Emmet</refere>'s <adereco>t-shirt</adereco> reads: NATURAL SELECTION. Like <refere personagem="p4">Mandy</refere>, he's lean, powerful, focused.
+									The TRACK COACH watches <refere personagem="p4">Mandy</refere> intently. She's his star. 
+								    <fala personagem="p1">Mark. Set.</fala>
+								    <comentario>GUNSHOT!</comentario> And they're off. <refere personagem="p4">Mandy</refere> and <refere personagem="p7">Emmet</refere> pull ahead of the other runners almost immediately.
+								    <fala personagem="p2">Water up!</fala>
+								    TYRONE, 17, the African-American quarterback, drops the <adereco>ball</adereco> where he stands, and turns to watch <refere personagem="p4">Mandy</refere> racing hard around the track.
+								    <fala personagem="p1">God-damn, look at her go.</fala>
+								    <fala personagem="p2">Too fine.</fala>
 								</cena>							
 							</cenas>
 						</parte>
 					</partes>
 				</episodio>
 				<episodio id="e3">
-					<titulo>Episódio 2. Só com título</titulo>
+					<titulo>Episódio 3</titulo>
+					<sinopse>Two steps forward and one step back. Michael gets Abruzzi on his side and proves Sucre's trustworthiness, but then loses a valuable piece of his plan.</sinopse>
 					<personagens>
 						<personagem id="p4">
-							<nome>Personagem 4. Declarada num episódio</nome>
+							<nome>Han Solo</nome>
 							<descricao>Personagem 4. Declarada num episódio</descricao>
 						</personagem>
 					
@@ -83,9 +123,9 @@
 				</episodio>
 			</episodios>
 		</temporada>
-		<temporada id="t3"><titulo>Temporada 3</titulo>
-			<!-- <temporada id="t99"><titulo>Temporada 99</titulo></temporada> -->
-			<!-- <cena></cena> -->
+		<temporada id="t3">
+			<titulo>Temporada 3</titulo>
+			<sinopse>The third season follows both Michael inside Sona and Lincoln on the outside in Panama. Sona is a prison that has been run by the inmates and guarded only from the outside since a riot the year before. Burrows is quickly contacted by Gretchen Morgan (a Company operative who was in charge of operations in Panama) who kidnapped his son LJ (Marshall Allman) and Sara Tancredi (Sarah Wayne Callies), the woman Michael loves.</sinopse>
 		</temporada>
 	</temporadas>
 </guiao>

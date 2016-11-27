@@ -1,236 +1,231 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema"
-	targetNamespace="http://www.pauloalmeida.org/guiao"
-	xmlns:tns="http://www.pauloalmeida.org/guiao"
-	elementFormDefault="qualified">
-
-	<element name="guiao">
-	    <complexType>
-	    	<sequence>
-	    		<element name="cabecalho" maxOccurs="1" minOccurs="1">
-	    			<complexType>
-	    				<sequence>
-	    					<element name="titulo" type="string"
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">	<xs:element name="guiao">
+	    <xs:complexType>
+	    	<xs:sequence>
+	    		<xs:element name="cabecalho" maxOccurs="1" minOccurs="1">
+	    			<xs:complexType>
+	    				<xs:sequence>
+	    					<xs:element name="titulo" type="xs:string"
 	    						maxOccurs="1" minOccurs="1">
-	    					</element>
-	    					<element name="autores" maxOccurs="1"
+	    					</xs:element>
+	    					<xs:element name="autores" maxOccurs="1"
 	    						minOccurs="0">
-	    						<complexType>
-	    							<sequence>
-	    								<element name="autor"
-	    									maxOccurs="unbounded" minOccurs="1" type="string">
-	    								</element>
+	    						<xs:complexType>
+	    							<xs:sequence>
+	    								<xs:element name="autor"
+	    									maxOccurs="unbounded" minOccurs="1" type="xs:string">
+	    								</xs:element>
 
-	    							</sequence>
-	    						</complexType>
-	    					</element>
-	    					<element name="data_publicacao"
-	    						type="tns:dataComplexType" maxOccurs="1" minOccurs="1">
-	    					</element>
-	    					<element name="personagens"
-	    						type="tns:personagensComplexType" maxOccurs="1"
+	    							</xs:sequence>
+	    						</xs:complexType>
+	    					</xs:element>
+	    					<xs:element name="data_publicacao"
+	    						type="dataComplexType" maxOccurs="1" minOccurs="1">
+	    					</xs:element>
+	    					<xs:element name="personagens"
+	    						type="personagensComplexType" maxOccurs="1"
 	    						minOccurs="1">
-	    					</element>
-	    					<element name="sinopse" type="string"
+	    					</xs:element>
+	    					<xs:element name="sinopse" type="xs:string"
 	    						maxOccurs="1" minOccurs="0">
-	    					</element>
-	    				</sequence>
-	    			</complexType>
-	    		</element>
-	    		<choice maxOccurs="1" minOccurs="0">
-	    			<element name="temporadas"
-	    				type="tns:temporadasComplexType" maxOccurs="1" minOccurs="0">
-	    			</element>
-	    			<element name="episodios"
-	    				type="tns:episodiosComplexType" maxOccurs="1" minOccurs="0">
-	    			</element>
-	    			<element name="partes" maxOccurs="1" minOccurs="0"
-	    				type="tns:partesComplexType">
-	    			</element>
-	    			<element name="cenas" maxOccurs="1" minOccurs="0"
-	    				type="tns:cenasComplexType">
-	    			</element>
-	    		</choice>
-	    	</sequence>
+	    					</xs:element>
+	    				</xs:sequence>
+	    			</xs:complexType>
+	    		</xs:element>
+	    		<xs:choice maxOccurs="1" minOccurs="0">
+	    			<xs:element name="temporadas"
+	    				type="temporadasComplexType" maxOccurs="1" minOccurs="0">
+	    			</xs:element>
+	    			<xs:element name="episodios"
+	    				type="episodiosComplexType" maxOccurs="1" minOccurs="0">
+	    			</xs:element>
+	    			<xs:element name="partes" maxOccurs="1" minOccurs="0"
+	    				type="partesComplexType">
+	    			</xs:element>
+	    			<xs:element name="cenas" maxOccurs="1" minOccurs="0"
+	    				type="cenasComplexType">
+	    			</xs:element>
+	    		</xs:choice>
+	    	</xs:sequence>
 		<!-- experimentar com isto e tentar limitar personagens e adereços -->
-	    </complexType>
-		<key name="myId"> 
-			<selector xpath="./AAA/a"/> 
-			<field xpath="@id"/> 
-		</key> 
-	</element>
+	    </xs:complexType>
+		<xs:key name="myId"> 
+			<xs:selector xpath="./AAA/a"/> 
+			<xs:field xpath="@id"/> 
+		</xs:key> 
+	</xs:element>
 	
 
-	<complexType name="dataComplexType">
-		<sequence>
-			<element name="ano" maxOccurs="1" minOccurs="1">
-				<simpleType>
-					<restriction base="int">
-						<minInclusive value="1900"></minInclusive>
-						<maxInclusive value="2020"></maxInclusive>
-					</restriction>
-				</simpleType>
-			</element>
-			<element name="mes" maxOccurs="1" minOccurs="1">
-				<simpleType>
-					<restriction base="int">
-						<minInclusive value="1"></minInclusive>
-						<maxInclusive value="12"></maxInclusive>
-					</restriction>
-				</simpleType>
-			</element>
-			<element name="dia" maxOccurs="1" minOccurs="1">
-				<simpleType>
-					<restriction base="int">
-						<minInclusive value="1"></minInclusive>
-						<maxInclusive value="31"></maxInclusive>
-					</restriction>
-				</simpleType>
-			</element>
-		</sequence>
-	</complexType>
+	<xs:complexType name="dataComplexType">
+		<xs:sequence>
+			<xs:element name="ano" maxOccurs="1" minOccurs="1">
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:minInclusive value="1900"></xs:minInclusive>
+						<xs:maxInclusive value="2020"></xs:maxInclusive>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="mes" maxOccurs="1" minOccurs="1">
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:minInclusive value="1"></xs:minInclusive>
+						<xs:maxInclusive value="12"></xs:maxInclusive>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="dia" maxOccurs="1" minOccurs="1">
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:minInclusive value="1"></xs:minInclusive>
+						<xs:maxInclusive value="31"></xs:maxInclusive>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
 
-	<complexType name="personagensComplexType">
-		<sequence>
-			<element name="personagem" maxOccurs="unbounded"
+	<xs:complexType name="personagensComplexType">
+		<xs:sequence>
+			<xs:element name="personagem" maxOccurs="unbounded"
 				minOccurs="0">
-				<complexType>
-					<sequence>
-						<element name="nome" type="string" maxOccurs="1"
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="nome" type="xs:string" maxOccurs="1"
 							minOccurs="1">
-						</element>
-						<element name="descricao" type="string"
+						</xs:element>
+						<xs:element name="descricao" type="xs:string"
 							maxOccurs="1" minOccurs="1">
-						</element>
-					</sequence>
-					<attribute name="id" type="ID"></attribute>
-				</complexType>
-			</element>
-		</sequence>
-	</complexType>
-	<complexType name="cenasComplexType">
-		<sequence>
-			<element minOccurs="0" maxOccurs="unbounded" name="cena">
-				<complexType mixed="true">
-                    <choice maxOccurs="unbounded" minOccurs="0">
-                        <element minOccurs="0" maxOccurs="unbounded" name="fala">
-										<complexType mixed="true">
-											<choice minOccurs="0" maxOccurs="unbounded">
-												<element name="adereco" type="string">
-												</element>
-												<element name="comentario" type="tns:ComentarioComplexType">
-												</element>
-												<element name="refere" type="tns:refereComplexType">
-												</element>
-											</choice>
-											<attribute use="required" name="personagem" type="IDREF">
-											</attribute>
-										</complexType>
-									</element>
-                        <element minOccurs="0" maxOccurs="unbounded" name="refere" type="tns:refereComplexType">
-									</element>
-                        <element minOccurs="0" maxOccurs="unbounded" name="comentario" type="tns:ComentarioComplexType">
-									</element>
-                        <element minOccurs="0" maxOccurs="unbounded" name="adereco" type="string">
-									</element>
-                    </choice>
-					<attribute name="contexto" type="string" use="required"></attribute>
-				</complexType>
-			</element>
-		</sequence>
-	</complexType>
-	<complexType name="partesComplexType">
-		<sequence>
-			<element minOccurs="0" maxOccurs="unbounded" name="parte">
-				<complexType>
-					<sequence>
-						<element minOccurs="1" maxOccurs="1"
-							name="titulo" type="string">
-						</element>
-						<element name="sinopse" type="string"
+						</xs:element>
+					</xs:sequence>
+					<xs:attribute name="id" type="xs:ID"></xs:attribute>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cenasComplexType">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="cena">
+				<xs:complexType mixed="true">
+                    <xs:choice maxOccurs="unbounded" minOccurs="0">
+                        <xs:element minOccurs="0" maxOccurs="unbounded" name="fala">
+										<xs:complexType mixed="true">
+											<xs:choice minOccurs="0" maxOccurs="unbounded">
+												<xs:element name="adereco" type="xs:string">
+												</xs:element>
+												<xs:element name="comentario" type="ComentarioComplexType">
+												</xs:element>
+												<xs:element name="refere" type="refereComplexType">
+												</xs:element>
+											</xs:choice>
+											<xs:attribute use="required" name="personagem" type="xs:IDREF">
+											</xs:attribute>
+										</xs:complexType>
+									</xs:element>
+                        <xs:element minOccurs="0" maxOccurs="unbounded" name="refere" type="refereComplexType">
+									</xs:element>
+                        <xs:element minOccurs="0" maxOccurs="unbounded" name="comentario" type="ComentarioComplexType">
+									</xs:element>
+                        <xs:element minOccurs="0" maxOccurs="unbounded" name="adereco" type="xs:string">
+									</xs:element>
+                    </xs:choice>
+					<xs:attribute name="contexto" type="xs:string" use="required"></xs:attribute>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="partesComplexType">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="parte">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="1" maxOccurs="1"
+							name="titulo" type="xs:string">
+						</xs:element>
+						<xs:element name="sinopse" type="xs:string"
 							maxOccurs="1" minOccurs="0">
-						</element>
-						<element name="personagens"
-							type="tns:personagensComplexType" maxOccurs="1" minOccurs="0">
-						</element>
-						<element name="cenas"
-							type="tns:cenasComplexType" maxOccurs="1" minOccurs="0">
-						</element>
-					</sequence>
-					<attribute use="required" name="id" type="ID"></attribute>
-				</complexType>
-			</element>
-		</sequence>
-	</complexType>
-	<complexType name="episodiosComplexType">
-		<sequence>
-			<element minOccurs="0" maxOccurs="unbounded" name="episodio">
-				<complexType>
-					<sequence>
-						<element minOccurs="1" maxOccurs="1"
-							name="titulo" type="string">
-						</element>
-						<element name="sinopse" type="string"
+						</xs:element>
+						<xs:element name="personagens"
+							type="personagensComplexType" maxOccurs="1" minOccurs="0">
+						</xs:element>
+						<xs:element name="cenas"
+							type="cenasComplexType" maxOccurs="1" minOccurs="0">
+						</xs:element>
+					</xs:sequence>
+					<xs:attribute use="required" name="id" type="xs:ID"></xs:attribute>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="episodiosComplexType">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="episodio">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="1" maxOccurs="1"
+							name="titulo" type="xs:string">
+						</xs:element>
+						<xs:element name="sinopse" type="xs:string"
 							maxOccurs="1" minOccurs="0">
-						</element>
-						<element name="personagens"
-							type="tns:personagensComplexType" maxOccurs="1" minOccurs="0">
-						</element>
-						<choice minOccurs="0" maxOccurs="1">
-							<element name="cenas"
-								type="tns:cenasComplexType" maxOccurs="1" minOccurs="0">
-							</element>
-							<element name="partes"
-								type="tns:partesComplexType" maxOccurs="1" minOccurs="0">
-							</element>
-						</choice>
-					</sequence>
-					<attribute use="required" name="id" type="ID"></attribute>
-				</complexType>
-			</element>
-		</sequence>
-	</complexType>
-	<complexType name="temporadasComplexType">
-		<sequence>
-			<element minOccurs="0" maxOccurs="unbounded" name="temporada">
-				<complexType>
-					<sequence>
-						<element minOccurs="1" maxOccurs="1"
-							name="titulo" type="string">
-						</element>
-						<element name="sinopse" type="string"
+						</xs:element>
+						<xs:element name="personagens"
+							type="personagensComplexType" maxOccurs="1" minOccurs="0">
+						</xs:element>
+						<xs:choice minOccurs="0" maxOccurs="1">
+							<xs:element name="cenas"
+								type="cenasComplexType" maxOccurs="1" minOccurs="0">
+							</xs:element>
+							<xs:element name="partes"
+								type="partesComplexType" maxOccurs="1" minOccurs="0">
+							</xs:element>
+						</xs:choice>
+					</xs:sequence>
+					<xs:attribute use="required" name="id" type="xs:ID"></xs:attribute>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="temporadasComplexType">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="temporada">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="1" maxOccurs="1"
+							name="titulo" type="xs:string">
+						</xs:element>
+						<xs:element name="sinopse" type="xs:string"
 							maxOccurs="1" minOccurs="0">
-						</element>
-						<element name="personagens"
-							type="tns:personagensComplexType" maxOccurs="1" minOccurs="0">
-						</element>
-						<element name="episodios"
-							type="tns:episodiosComplexType" maxOccurs="1" minOccurs="0">
-						</element>
-					</sequence>
-					<attribute use="required" name="id" type="ID"></attribute>
-				</complexType>
-			</element>
-		</sequence>
-	</complexType>
+						</xs:element>
+						<xs:element name="personagens"
+							type="personagensComplexType" maxOccurs="1" minOccurs="0">
+						</xs:element>
+						<xs:element name="episodios"
+							type="episodiosComplexType" maxOccurs="1" minOccurs="0">
+						</xs:element>
+					</xs:sequence>
+					<xs:attribute use="required" name="id" type="xs:ID"></xs:attribute>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
 	
 
 
 
-	<complexType name="ComentarioComplexType" mixed="true">
-		<choice maxOccurs="unbounded" minOccurs="0">
-			<element name="refere" type="tns:refereComplexType">
-			</element>
-			<element name="adereco" type="string"></element>
-		</choice>
-	</complexType>
-	<complexType name="refereComplexType">
-		<simpleContent>
-			<extension base="string">
-				<attribute use="required" name="personagem"
-					type="IDREF">
-				</attribute>
-			</extension>
-		</simpleContent>
-	</complexType>
-</schema>
+	<xs:complexType name="ComentarioComplexType" mixed="true">
+		<xs:choice maxOccurs="unbounded" minOccurs="0">
+			<xs:element name="refere" type="refereComplexType">
+			</xs:element>
+			<xs:element name="adereco" type="xs:string"></xs:element>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="refereComplexType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute use="required" name="personagem"
+					type="xs:IDREF">
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+</xs:schema>
